@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* root vars, has fallbacks */
+:root {
+  --primary-color: #3498db;                          /* hex */
+  --secondary-color: rgb(231, 76, 60);               /* rgb */
+  --accent-color: hsl(120, 60%, 70%);                /* hsl */
+  --font-family: 'Poppins', sans-serif;                /* font (from google fonts) */
+}
+
+/* global reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body styling */
+body {
+  font-family: var(--font-family, Arial, sans-serif); /* var() with fallback */
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6rem;
+}
+
+/* header */
+header {
+  top: 0;
+  background-color: color-mix(in srgb, var(--primary-color, #3498db) 70%, var(--accent-color) 30%);
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin: 1cm auto 2cm auto;
+  border-width: 4pt;
+  border-style: dashed;
+  border-color: #fff;
+  border-radius: 0.5rem;
+  height: auto;
+}
+
+/* header titles */
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+header h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* note styling */
+header p span {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+header p em {
+  font-style: italic;
+}
+
+/* nav container */
+nav {
+  position: relative;
+  background-color: var(--secondary-color);
+  display: block;
+  padding-top: 0.5cm;
+  padding-bottom: 0.5cm;
+  margin-bottom: 1rem;
+}
+
+/* flexbox layout on nav ul:
+   - more than two <li> children
+   - uses display, justify-content, align-items, flex-wrap, gap */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+nav ul li {
+  margin-top: 5px;
+}
+nav ul li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+nav ul li a:active {
+  opacity: 0.7;
+}
+
+/* grid layout on main:
+   - more than two <section> children
+   - uses display, grid-template-columns, grid-gap, align-items, justify-items, grid-auto-rows */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  align-items: start;
+  justify-items: center;
+  grid-auto-rows: auto;
+  padding: 1rem;
+}
+
+/* sections */
+section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  min-width: 250px;
+  max-width: 500px;
+  height: auto;
+}
+
+/* image */
+section#misc div img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* media elements */
+audio {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: 30px; 
+  margin: 1rem auto;
+}
+video {
+  display: block;
+  width: 200px;
+  height: 100px;
+  margin: 1rem auto;
+}
+
+/* details summary hidden by default */
+section#notes details summary {
+  display: none;
+}
+section#notes details {
+  display: block;
+}
+
+/* meeting feedback form */
+form fieldset {
+  border: 2px solid var(--primary-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+legend {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--accent-color);
+}
+button:active {
+  transform: translateY(1px);
+}
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: color(display-p3 0.25 0.5 0.75 / 0.9);
+  color: #ddd;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* responsive breakpoint */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+}
