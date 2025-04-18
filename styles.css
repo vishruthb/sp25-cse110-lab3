@@ -70,7 +70,8 @@ nav {
 
 /* flexbox layout on nav ul:
    - more than two <li> children
-   - uses display, justify-content, align-items, flex-wrap, gap */
+   - uses display, justify-content, align-items, flex-wrap, gap 
+*/
 nav ul {
   list-style: none;
   display: flex;
@@ -100,7 +101,8 @@ nav ul li a:active {
 
 /* grid layout on main:
    - more than two <section> children
-   - uses display, grid-template-columns, grid-gap, align-items, justify-items, grid-auto-rows */
+   - uses display, grid-template-columns, grid-gap, align-items, justify-items, grid-auto-rows 
+*/
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
