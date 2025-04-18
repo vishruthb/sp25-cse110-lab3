@@ -27,7 +27,7 @@ body {
 header {
   position: relative;
   top: 0;
-  background-color: var(--primary-color); 
+  /* background-color: var(--primary-color);  */
   background-color: color-mix(in srgb, var(--primary-color, #3498db) 70%, var(--accent-color) 30%);
   color: white;
   text-align: center;
@@ -195,7 +195,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #4f7dcc; 
+  /* background-color: #4f7dcc;  */
   background-color: color(display-p3 0.25 0.5 0.75 / 0.9);
   color: #ddd;
   text-align: center;
