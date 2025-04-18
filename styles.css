@@ -198,6 +198,65 @@ footer {
   padding: 1rem;
 }
 
+/* selectors */
+.highlight {
+  background-color: yellow;
+  padding: 0.2rem;
+}
+  
+#feedback {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+*:focus {
+  outline: 2px dashed var(--secondary-color);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+input[type="radio"] {
+  margin-right: 0.5em;
+}
+
+h1, h2 {
+  font-family: var(--font-family);
+}
+
+main section p {
+  color: #555;
+}
+
+main > section {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 + p {
+  font-style: italic;
+}
+
+h2 ~ hr {
+  border-top: 2px solid var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+section.info {
+  border-left: 4px solid var(--accent-color);
+}
+
+section:has(img) {
+  padding-top: 0.5rem;
+}
+
+form fieldset {
+  & > legend {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
 /* responsive breakpoint */
 @media (max-width: 768px) {
   nav ul {
