@@ -25,6 +25,7 @@ body {
 
 /* header */
 header {
+  position: relative;
   top: 0;
   background-color: color-mix(in srgb, var(--primary-color, #3498db) 70%, var(--accent-color) 30%);
   color: white;
@@ -63,7 +64,7 @@ nav {
   display: block;
   padding-top: 0.5cm;
   padding-bottom: 0.5cm;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* flexbox layout on nav ul:
