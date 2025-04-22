@@ -148,7 +148,10 @@ video {
 
 /* details summary hidden by default */
 section#notes details summary {
-  display: none;
+  display: list-item;   /* default UA value; block also works */
+  cursor: pointer;      /* nice visual cue */
+  font-weight: 600;     /* optional styling */
+  margin-bottom: 0.5rem;
 }
 section#notes details {
   display: block;
